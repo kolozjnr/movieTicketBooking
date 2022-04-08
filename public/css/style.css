@@ -1,0 +1,31 @@
+
+
+
+.admin-card{
+    border-radius: 20px;
+    height: 200px;
+}
+.card-title
+{
+    text-align: center;
+}
+.ico
+{
+    color: #ffffff;
+    margin: auto;
+    font-size: 2rem;
+}
+.card-text
+{
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-text:hover
+{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}

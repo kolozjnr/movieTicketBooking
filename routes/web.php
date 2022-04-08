@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnivController;
+use App\Http\Controllers\MovieUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\UnivController;
 
 Route::get('/', [UnivController::class, ('index')])->name('Home');
 Route::get('genre', [UnivController::class, ('genre')])->name('Genre');
-
+Route::resource('admin', MovieUploadController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

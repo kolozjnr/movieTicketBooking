@@ -1,4 +1,4 @@
-<x-guest-layout title="Genrehg">
+<x-guest-layout title="Genre">
     <x-auth-card>
 	@include('layouts.menu')
 <!--/breadcrumbs -->
