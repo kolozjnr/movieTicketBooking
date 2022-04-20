@@ -1,5 +1,10 @@
 
-
+.latest-movie
+{
+    width: 50%;
+    height: 400px;
+    margin: 20px;
+}
 
 .admin-card{
     border-radius: 20px;
@@ -17,9 +22,10 @@
 }
 .card-text
 {
+    text-decoration: none;
     color: #ffffff;
     font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .card-text:hover
@@ -27,5 +33,54 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+.login{
+    background-image: url("/assets/images/bg2.JPG") !important;
+    background-color: inherit;
+    background-size: contain;
+}
+.login-form-back
+{
+    background-image: url("/assets/images/loginbg.JPG") !important;
+    background-color: inherit;
+    background-size: contain;
+}
+.restrict
+{
+    color: red;
+    font-weight: 700;
+}
+.login-img
+{
+    background: rgba( 21, 21, 19, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 400px;
+    padding-top: 20px;
+}
+.fa-film{
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.show-img{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .show-img div{
+    margin: 10px;
+  }
+  .items{
+    flex: 1;
+  }
+  .card-img-to
+  {
+
+    max-width: 300px !important;
+    max-height: 250px !important;
+  }

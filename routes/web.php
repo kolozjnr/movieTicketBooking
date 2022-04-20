@@ -21,6 +21,7 @@ use App\Http\Controllers\MovieUploadController;
 
 Route::get('/', [UnivController::class, ('index')])->name('Home');
 Route::get('genre', [UnivController::class, ('genre')])->name('Genre');
+Route::get('new-release', [UnivController::class, ('newReleases')])->name('newReleases');
 Route::resource('admin', MovieUploadController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');

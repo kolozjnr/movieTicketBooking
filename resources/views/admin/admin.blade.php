@@ -14,7 +14,7 @@
                     <a href="{{route('admin.create')}}">
                       <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-cloud-arrow-up-fill ico"></i></h5>
-                        <h2 class="card-text">UPLOAD a MOVIE</h2>
+                        <h2 class="card-text">UPLOAD MOVIE</h2>
                       </div>
                       <div class="card-header">Upload Movie</div></a>
                     </div>
@@ -35,12 +35,12 @@
                       <div class="card-header">View Tickets</div></a>
                     </div>
                   </div>
-                  <div class="row">
+                  <!---div class="row">
                     <div class="card text-white bg-danger m-3" style="max-width: 18rem;">
                     <a href="#">
                       <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-people-fill"></i></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                       <h2 class="card-text">Delete Movies</h2>
                       </div>
                       <div class="card-header">Add Admin</div></a>
                     </div>
@@ -76,7 +76,7 @@
                     </div>
                   </div>
                 </div>
-            </div>
+            </div>-----
         </div>
     </div>
 </x-app-layout>

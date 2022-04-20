@@ -4,75 +4,36 @@
 @include('layouts.menu')
 	<!-- main-slider -->
 	<section class="w3l-main-slider position-relative" id="home">
-		<div class="companies20-content">
-			<div class="owl-one owl-carousel owl-theme">
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view bg bg2">
-							<div class="banner-info">
-								<h3>Latest Movie Trailers</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
-									voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/358205676" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+		@foreach($latests as $latest)
+				<div class="carousel-item {{$latest['id']== 1 ? 'active':''}}">
+				<img src="/movies/{{$latest->movie_img}}" class="d-block w-100 latest-movie" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					
+					<h5>First slide label</h5>
+					<p>Some representative placeholder content for the first slide.</p>
 				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info  banner-view banner-top1 bg bg2">
-							<div class="banner-info">
-								<h3>Latest Online Movies</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
-									voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog2" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/395376850" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
 				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view banner-top2 bg bg2">
-							<div class="banner-info">
-								<h3>Latest Movie Trailers</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
-									voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog3" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog3" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/389969665" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-				<div class="item">
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+@endforeach
+
+	<!--div class="item">
 					<li>
 						<div class="slider-info banner-view banner-top3 bg bg2">
 							<div class="banner-info">
@@ -85,7 +46,7 @@
 									</span>
 									<h6>Watch Trailer</h6>
 								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+								< dialog itself, mfp-hide class is required to make dialog hidden >
 								<div id="small-dialog4" class="zoom-anim-dialog mfp-hide">
 									<iframe src="https://player.vimeo.com/video/323491174" allow="autoplay; fullscreen"
 										allowfullscreen=""></iframe>
@@ -94,9 +55,6 @@
 						</div>
 					</li>
 				</div>
-			</div>
-		</div>
-	</section>
 	<!-- //banner-slider-->
 	<!-- main-slider -->
 	<!--grids-sec1-->
