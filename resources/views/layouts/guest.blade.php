@@ -10,18 +10,20 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Template CSS -->
-        <link rel="stylesheet" href="assets/css/style-starter.css">
-        <!-- Template CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /--->
         <link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
             rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-        <!-- Template CSS -->
+        <!-- Boostrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/style-starter.css') }}">
+        <!-- Template CSS -->
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
@@ -37,24 +39,7 @@
                     <div class="container py-lg-4">
                         <div class="text-txt">
                             <div class="right-side">
-                                <div class="row footer-about">
-                                    <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                        <a href="genre.html"><img class="img-fluid" src="assets/images/banner1.jpg"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                        <a href="genre.html"><img class="img-fluid" src="assets/images/banner2.jpg"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                        <a href="genre.html"><img class="img-fluid" src="assets/images/banner3.jpg"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-                                        <a href="genre.html"><img class="img-fluid" src="assets/images/banner4.jpg"
-                                                alt=""></a>
-                                    </div>
-                                </div>
+                                
                                 <div class="row footer-links">
 
 
@@ -72,23 +57,22 @@
                                     <div class="col-md-3 col-sm-6 sub-two-right mt-5">
                                         <h6>Information</h6>
                                         <ul>
-                                            <li><a href="index.html">Home</a> </li>
-                                            <li><a href="about.html">About</a> </li>
+                                            <li><a href="/">Home</a> </li>
+                                            <li><a href="/">About</a> </li>
                                             <li><a href="#">Tv Series</a> </li>
-                                            <li><a href="#">Blogs</a> </li>
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="/">Login</a></li>
+                                            <li><a href="/">Contact</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-md-3 col-sm-6 sub-two-right mt-5">
                                         <h6>Locations</h6>
                                         <ul>
-                                            <li><a href="genre.html">Asia</a></li>
-                                            <li><a href="genre.html">France</a></li>
-                                            <li><a href="genre.html">Taiwan</a></li>
-                                            <li><a href="genre.html">United States</a></li>
-                                            <li><a href="genre.html">Korea</a></li>
-                                            <li><a href="genre.html">United Kingdom</a></li>
+                                            <li><a href="/">Abuja</a></li>
+                                            <li><a href="/">Lagos</a></li>
+                                            <li><a href="/">Portharcourt</a></li>
+                                            <li><a href="/">Kano</a></li>
+                                            <li><a href="/">Minna</a></li>
+                                            <li><a href="/">Calabar</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-md-3 col-sm-6 sub-two-right mt-5">
@@ -110,7 +94,7 @@
                     <div class="container">
                         <div class="copyright-footer">
                             <div class="columns text-lg-left">
-                                <p>&copy; 2020 ProShowz. All rights reserved | Designed by <a
+                                <p>&copy; 20222. All rights reserved | Designed by <a
                                         href="https://w3layouts.com">W3layouts</a></p>
                             </div>
 
@@ -168,8 +152,8 @@
 
 	
 <!-- responsive tabs -->
-<script src="assets/js/jquery-1.9.1.min.js"></script>
-  <script src="assets/js/easyResponsiveTabs.js"></script>
+<script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
+  <script src="{{asset('assets/js/easyResponsiveTabs.js')}}"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       //Horizontal Tab
@@ -190,9 +174,9 @@
   </script>  
 <!-- //responsive tabs -->
 <!--/theme-change-->
-<script src="assets/js/theme-change.js"></script>
+<script src="{{asset('assets/js/theme-change.js')}}"></script>
 <!-- //theme-change-->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="{{asset('assets/js/owl.carousel.js')}}"></script>
 <!-- script for banner slider-->
 <script>
 	$(document).ready(function () {

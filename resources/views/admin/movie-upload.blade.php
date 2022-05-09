@@ -44,10 +44,15 @@
                                 <option selected disabled>Choose Movie Genre</option>
                                 <option value="Action">Action</option>
                                 <option value="Romance">Romance</option>
+                                <option value="family">Family</option>
+                                <option value="series">Tv-Series</option>
                                 <option value="scifi">Sci-Fi</option>
+                                <option value="drama">Drama</option>
+                                <option value="comedy">Comedy</option>
                                 <option value="Thriller">Thriller</option>
                                 <option value="Adventure">Adventure</option>
                                 <option value="Kung-fu">Kung Fu</option>
+                                <option value="horror">Horror</option>
                                 </select>
                             </div>
                         </div>

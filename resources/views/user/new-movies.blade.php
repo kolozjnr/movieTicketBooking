@@ -50,18 +50,25 @@
 					<div class="item vhny-grid">
 						<div class="box16">
 							<figure>
-							<img src="/movies/{{ $popular->movie_img }}" class="card-img-to" width="300" height="200" alt="...">
+							<img src="/movies/{{ $popular->movie_img }}" class="card-img-to" width="300" height="500" alt="...">
 							
 							</figure>
 							<div class="box-content">
 								<h3 class="title">{{$popular->movie_title}}</h3>
 								<h4> <span class="post"><span class="fa fa-clock-o"> </span>{{$popular->movie_hr}} Hr {{$popular->movie_mins}} min</span>
 									<span class="post fa fa-heart text-right"></span>
+									
 								</h4>
+								<div class="about-btn">
+										<form action="{{ route('Descr', $popular->id)}}" method="post">
+										@csrf
+										<button class="btn btn-warning ml-auto">About</button>
+										</form>
+									</div>
 							</div>
 							<span class="fa fa-play video-icon" aria-hidden="true"></span>
 						</div>
-						<div class="pt-15">
+						<div class="book-btn">
 							<form action="{{ route('newReleases', $popular->id)}}" method="post">
 								@csrf
 								<button class="btn btn-success">Book Now</button>

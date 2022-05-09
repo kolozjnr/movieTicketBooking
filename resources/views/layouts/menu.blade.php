@@ -52,22 +52,22 @@
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
 									<ul class="search-items">
-										<li><a href="genre.html">Action</a></li>
-										<li><a href="genre.html">Drama</a></li>
-										<li><a href="genre.html">Family</a></li>
-										<li><a href="genre.html">Thriller</a></li>
-										<li><a href="genre.html">Commedy</a></li>
-										<li><a href="genre.html">Romantic</a></li>
+										<li><a href="/action">Action</a></li>
+										<li><a href="/drama">Drama</a></li>
+										<li><a href="/family">Family</a></li>
+										<li><a href="/thriller">Thriller</a></li>
+										<li><a href="/comedy">Comedy</a></li>
+										<li><a href="/romance">Romantic</a></li>
 										<li><a href="genre.html">Tv-Series</a></li>
-										<li><a href="genre.html">Horror</a></li>
-										<li><a href="genre.html">Action</a></li>
-										<li><a href="genre.html">Drama</a></li>
-										<li><a href="genre.html">Family</a></li>
-										<li><a href="genre.html">Thriller</a></li>
-										<li><a href="genre.html">Commedy</a></li>
-										<li><a href="genre.html">Romantic</a></li>
-										<li><a href="genre.html">Tv-Series</a></li>
-										<li><a href="genre.html">Horror</a></li>
+										<li><a href="/horror">Horror</a></li>
+										<li><a href="/action">Action</a></li>
+										<li><a href="/drama">Drama</a></li>
+										<li><a href="/family">Family</a></li>
+										<li><a href="/thriller">Thriller</a></li>
+										<li><a href="/comedy">Comedy</a></li>
+										<li><a href="/romance">Romantic</a></li>
+										<li><a href="/series">Tv-Series</a></li>
+										<li><a href="/horro">Horror</a></li>
 									</ul>
 								</div>
 							</div>
@@ -80,7 +80,7 @@
 
 				</div>
 				<!-- toggle switch for light and dark theme -->
-				<!---div class="mobile-position">
+				<div class="mobile-position">
 					<nav class="navigation">
 						<div class="theme-switch-wrapper">
 							<label class="theme-switch" for="checkbox">
@@ -92,7 +92,7 @@
 							</label>
 						</div>
 					</nav>
-				</div---->
+				</div>
 				<!-- //toggle switch for light and dark theme -->
 			</div>
 		</nav>

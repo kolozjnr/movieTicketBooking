@@ -1,387 +1,57 @@
-<x-guest-layout title="Movie Home">
+<x-guest-layout title="Family Movie">
     <x-auth-card>
 
 	@include('layouts.menu')
 	<!-- main-slider -->
-	<section class="w3l-main-slider position-relative" id="home">
-		<div class="companies20-content">
-			<div class="owl-one owl-carousel owl-theme">
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view bg bg2">
-							<div class="banner-info">
-								<h3>Dr Strange</h3>
-								<p>Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name
-									<span class="over-para"> Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 14th film in the Marvel Cinematic Universe (MCU).</span></p>
-								<a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/358205676" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info  banner-view banner-top1 bg bg2">
-							<div class="banner-info">
-								<h3>FROZEN</h3>
-								<p>Frozen is a 2013 American computer-animated musical fantasy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures. <span class="over-para"> he 53rd Disney animated feature film, it is inspired by Hans Christian Andersen's fairy tale "The Snow Queen". </span></p>
-								<a href="#small-dialog2" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/395376850" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view banner-top2 bg bg2">
-							<div class="banner-info">
-								<h3>The Dark Knight</h3>
-								<p>The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. <span class="over-para"> The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. </span></p>
-								<a href="#small-dialog3" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog3" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/389969665" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-				<div class="item">
-					<li>
-						<div class="slider-info banner-view banner-top3 bg bg2">
-							<div class="banner-info">
-								<h3>Latest Online Movies</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
-									voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog4" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-								<div id="small-dialog4" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/323491174" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--div class="item">
-					<li>
-						<div class="slider-info banner-view banner-top3 bg bg2">
-							<div class="banner-info">
-								<h3>Latest Online Movies</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
-									voluptatem tenetur consequatur.</span></p>
-								<a href="#small-dialog4" class="popup-with-zoom-anim play-view1">
-									<span class="video-play-icon">
-										<span class="fa fa-play"></span>
-									</span>
-									<h6>Watch Trailer</h6>
-								</a>
-								< dialog itself, mfp-hide class is required to make dialog hidden >
-								<div id="small-dialog4" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/323491174" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
-								</div>
-							</div>
-						</div>
-					</li>
-				</div>
-	<!-- //banner-slider-->
-	<!-- main-slider -->
-	<!--grids-sec1-->
+	
+	@include('layouts.header')
 	<section class="w3l-grids">
 		<div class="grids-main py-5">
 			<div class="container py-lg-3">
 				<div class="headerhny-title">
 					<div class="w3l-title-grids">
 						<div class="headerhny-left">
-							<h3 class="hny-title">Movies</h3>
+							<h3 class="hny-title">Horror Movies</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="genre.html">Show all</a></h4>
+							<h4><a class="show-title" href="/">Back Home</a></h4>
 						</div>
 					</div>
 				</div>
+				@if($items->isEmpty())
+					<marquee behavior="" direction=""><h4 class="text-muted text-center" style="color:red">{{ __('No Horror Movies Uploaded Yet') }}</h4></marquee>
+				@endif
 				<div class="w3l-populohny-grids">
-							@foreach($movies as $movie)
+				@foreach($items as $item)
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="{{ route('Descr', $movie->id)}}">
+							<a href="{{ route('Descr', $item->id)}}">
 								<figure>
-									<img class="img-fluid" src="/movies/{{ $movie->movie_img }}" alt="">
+									<img class="img-fluid" src="/movies/{{ $item->movie_img }}" alt="">
 								</figure>
 								<div class="box-content">
-									<h3 class="title">Frozen 2</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> {{$movie->movie_hr}} Hr {{$movie->movie_mins}} min</span>
+									<h3 class="title">{{$item->movie_title}}</h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> {{$item->movie_hr}} Hr {{$item->movie_mins}} min</span>
 
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
+									<!--div class="about-btn">
+										<form action="" method="post">
+										@csrf
+										<button class="btn btn-warning ml-auto">About</button>
+										</form>
+									</div---->
 								</div>
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 					</div>
 					@endforeach
-					<!--div class="item vhny-grid">
-						<div class="box16">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/m3.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Knives Out</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/m4.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Little Women</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/m5.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h3 class="title">Jumanji</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-					</div--->
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--//grids-sec1-->
-	<!--grids-sec2-->
-	<section class="w3l-grids">
-		<div class="grids-main py-5">
-			<div class="container py-lg-3">
-				<div class="headerhny-title">
-					<div class="w3l-title-grids">
-						<div class="headerhny-left">
-							<h3 class="hny-title">New Releases</h3>
-						</div>
-						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="{{route('newReleases')}}">Show all</a></h4>
-						</div>
-					</div>
-				</div>
-				<div class="owl-three owl-carousel owl-theme">
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n1.jpg" alt="">
-								</figure>
-								<div class="box-content">
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">No Time to Die</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n2.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Mulan</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n3.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Free Guy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n4.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">My Spy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n5.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Scoob</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-					<div class="item vhny-grid">
-						<div class="box16 mb-0">
-							<a href="genre.html">
-								<figure>
-									<img class="img-fluid" src="assets/images/n6.jpg" alt="">
-								</figure>
-								<div class="box-content">
-
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
-									</h4>
-								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
-							</a>
-						</div>
-						<h3> <a class="title-gd" href="genre.html">Downhill</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-						<div class="button-center text-center mt-4">
-							<a href="genre.html" class="btn watch-button">Watch now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-	<!--grids-sec2-->
 	<!--mid-slider -->
 	<section class="w3l-mid-slider position-relative">
 		<div class="companies20-content">
