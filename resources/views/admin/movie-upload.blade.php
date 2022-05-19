@@ -6,7 +6,7 @@
     </x-slot>
     
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     
@@ -22,7 +22,7 @@
                                 <label for="exampleFormControlInput" name="" class="visually-hidden form-label">Movie Titl</label>
                                 <select class="form-select" name="movie_catr" aria-label="Default select example">
                                 <option selected disabled>Choose Movie Category</option>
-                                <option value="Nollywood">ENollywoodnglish</option>
+                                <option value="Nollywood">Nollywood</option>
                                 <option value="Hollywood">Hollywood</option>
                                 <option value="Bollywood">Bollywood</option>
                                 </select>
@@ -32,7 +32,7 @@
                             <div class="mb-3 col-6">
                                 <label for="exampleFormControlInput" name="" class="visually-hidden form-label">Movie Title</label>
                                 <select class="form-select" name="movie_type" aria-label="Default select example">
-                                <option selected disabled>Choose Movie Category</option>
+                                <option selected disabled>Choose Movie Type</option>
                                 <option value="Latest">Latest Movie</option>
                                 <option value="Trend">Trending Movies</option>
                                 <option value="New">New Release</option>
@@ -44,10 +44,15 @@
                                 <option selected disabled>Choose Movie Genre</option>
                                 <option value="Action">Action</option>
                                 <option value="Romance">Romance</option>
+                                <option value="family">Family</option>
+                                <option value="series">Tv-Series</option>
                                 <option value="scifi">Sci-Fi</option>
+                                <option value="drama">Drama</option>
+                                <option value="comedy">Comedy</option>
                                 <option value="Thriller">Thriller</option>
                                 <option value="Adventure">Adventure</option>
                                 <option value="Kung-fu">Kung Fu</option>
+                                <option value="horror">Horror</option>
                                 </select>
                             </div>
                         </div>

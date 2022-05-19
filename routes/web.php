@@ -21,7 +21,27 @@ use App\Http\Controllers\MovieUploadController;
 
 Route::get('/', [UnivController::class, ('index')])->name('Home');
 Route::get('genre', [UnivController::class, ('genre')])->name('Genre');
+Route::get('new-release', [UnivController::class, ('newReleases')])->name('newReleases');
+Route::get('movie-descr/id={movieDescr}', [MovieUploadController::class, ('getDescr')])->name('Descr');
+Route::post('movie-descr/id={movieDescr}', [MovieUploadController::class, ('getDescr')])->name('Descr');
 Route::resource('admin', MovieUploadController::class);
+//Route::get('action', [UnivController::class, ('action')])->name('Action');
+//UniversalController Group Routes
+Route::controller(UnivController::class)->group(function ()
+{
+    Route::get('action', 'action')->name('Action');
+    Route::get('scifi', 'scifi')->name('Scifi');
+    Route::get('family', 'family')->name('Family');
+    Route::get('drama', 'drama')->name('Drama');
+    Route::get('kungfu', 'kingfu')->name('Kungfu');
+    Route::get('series', 'series')->name('Series');
+    Route::get('romance', 'romance')->name('Romance');
+    Route::get('comedy', 'comedy')->name('Comedy');
+    Route::get('horror', 'horror')->name('Horror');
+    Route::get('thriller', 'thriller')->name('Thriller');
+    Route::get('details/id={id}', 'getDetails')->name('getDetails');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

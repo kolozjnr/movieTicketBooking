@@ -111,6 +111,17 @@ class MovieUploadController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $movie = movieUpload::find($id);
+        $movie->delete();
+     
+        return redirect()->route('/admin')
+                        ->with('success','Movie deleted successfully');
+    }
+
+    public function getDescr(movieUpload $movieDescr)
+    {
+        $other_movies = movieUpload::inRandomOrder()->get();
+
+        return view('user.movie-descr', ['movie' => $movieDescr], ['other_movies' => $other_movies]);
     }
 }
