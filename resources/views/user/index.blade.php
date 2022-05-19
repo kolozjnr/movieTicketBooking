@@ -71,6 +71,7 @@
 					</li>
 				</div>
 				<div class="item">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. In placeat similique doloribus veritatis quis iusto beatae explicabo accusantium distinctio quaerat commodi, asperiores error molestiae vitae magni eveniet neque aliquam laboriosam nihil hic. Et necessitatibus sapiente, provident qui unde dolorem hic dolorum pariatur consectetur delectus quas dolores illum! Iste, illum sed.
 					<li>
 						<div class="slider-info banner-view banner-top3 bg bg2">
 							<div class="banner-info">
