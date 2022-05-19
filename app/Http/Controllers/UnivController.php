@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\movieUpload;
+use App\Models\UserBookingRecord;
 use Illuminate\Support\Facades\DB;
 
 class UnivController extends Controller
@@ -106,5 +107,13 @@ class UnivController extends Controller
         $detail = movieUpload::find($id);
         return view('user.data', ['movieUpload' =>$detail]);
     }
-   
+   //pay for tickets
+   public function pay(Request $req)
+   {
+       $pay = UserBookingRecord::updateOrCreate(
+           ['movie_title' => $req->movie_title],
+           ['user_name' => $req->user_name, 'user_email' =>$req->user_email, 'user_tel' => $req->user_tel, 'R2' => $req->R2, 'R3'=>$req->R3, 'R4'=>$req->R4]
+       );
+       dd($pay);
+   }
 }

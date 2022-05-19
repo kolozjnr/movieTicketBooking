@@ -14,6 +14,6 @@ class movieUpload extends Model
     //Relationship
     public function tickets()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->hasMany(UserBookingRecord::class);
     }
 }

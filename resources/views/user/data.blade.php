@@ -2,6 +2,21 @@
     <x-auth-card>
 
 @include('layouts.menu')
+<script>
+	function totalIt() {
+  var input = document.getElementsByClassName("sitNo");
+  var amount = 0;
+  for (var i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+		amount += parseFloat(input[i].value);
+    }
+  }
+  document.getElementById("amount").value = "\u20A6" + amount.toFixed(2);
+}
+
+
+</script>
+
 <section class="w3l-grids bg-light datainfo pt-20">
 	<div class="container">
 		<div class="col-12">
@@ -16,28 +31,34 @@
 					<!-- Validation Errors -->
 					<x-auth-validation-errors class="mb-4" :errors="$errors" />
 					<h5 class="userdetails">Kindly Fill this form and click on pay to reserve a {{$movieUpload['movie_title']}} space</h5>
-					<form method="POST" action="{{ route('register') }}">
+					<form id="paymentForm">
 					@csrf
 
 						<!-- Name -->
 						<div>
+						<x-input id="name" class="block mt-1 w-full" type="hidden" name="movie_title" value="{{$movieUpload['movie_title']}}" required autofocus />
+						<x-input id="name" class="block mt-1 w-full" type="hidden" name="movie_id" value="{{$movieUpload['id']}}" required autofocus />
+
+						 <!-----Add Movie Date and Price field once Available---->
+
+
 							<x-label for="name" :value="__('Name')" />
 
-							<x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+							<x-input id="last-name" class="block mt-1 w-full" type="text" name="user_name" :value="old('name')" required autofocus />
 						</div>
 
 						<!-- Email Address -->
 						<div class="mt-4">
 							<x-label for="email" :value="__('Email')" />
 
-							<x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+							<x-input id="email-address" class="block mt-1 w-full" type="email" name="user_email" :value="old('email')" required />
 						</div>
 
 						<!-- Password -->
 						<div class="mt-4">
 							<x-label for="Phone Number" :value="__('Phone Number')" />
 
-							<x-input id="tel" class="block mt-1 w-full" type="tel" name="tel" :value="old('tel')" required />
+							<x-input id="tel" class="block mt-1 w-full" type="tel" name="user_tel" :value="old('tel')" required />
 						</div>
 
 						<!-- Confirm Password -->
@@ -45,29 +66,103 @@
 							
 						</div>
 
-						<div class="flex items-center justify-end mt-4 mb-5">
-							
-							<x-button class="ml-4">
-								{{ __('Pay') }}
-							</x-button>
-						</div>
+						
 					</div>
 					<div class="col-6">
 						<div class="row">
-							<div class="col-6">
-								<input type="checkbox" name="" id="">
-								<input type="checkbox" name="" id="">
-								<input type="checkbox" name="" id="">
-								<input type="checkbox" name="" id="">
-								<input type="checkbox" name="" id="">
-								<input type="checkbox" name="" id="">
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="R1" value="{{$movieUpload['movie_price']}}" id="r1" onclick="totalIt()" disabled>
+								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R2" onclick="totalIt()" id="r2">
+								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R3" onclick="totalIt()" id="r3">
+								<input type="checkbox" class="sitNo mr-2" name="R4" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
+								<input type="checkbox" class="sitNo mr-2" name="R5" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
+							</div>
+							<div class="col-4">
+								<input type="checkbox" class="sitNo mr-2" name="R6" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="" disabled>
+								<input type="checkbox" class="sitNo mr-2" name="R7" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
+								<input type="checkbox" class="sitNo mr-2" name="R8" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
+								<input type="checkbox" class="sitNo mr-2" name="R9" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
+								<input type="checkbox" class="sitNo mr-2" name="10" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
 							</div>
 						</div>
+						<div class="row pt-3">
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="R11" id="" disabled>
+								<input type="checkbox" class="mr-2" name="R12" id="">
+								<input type="checkbox" class="mr-2" name="R13" id="">
+								<input type="checkbox" class="mr-2" name="R14" id="">
+								<input type="checkbox" class="mr-2" name="R15" id="">
+							</div>
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+						</div>
+						<div class="row pt-3">
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+						</div>
+						<div class="row pt-3">
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+						</div>
+						<div class="row pt-3">
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+							<div class="col-4">
+								<input type="checkbox" class="mr-2" name="" id="" disabled>
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+								<input type="checkbox" class="mr-2" name="" id="">
+							</div>
+						</div>
+						<label for="" class="pt-8"><strong>Total:</strong></label>
+						<input type="tel" value="&#8358" id="amount" required />
 					</div>
+					
+		<div class="form-submit">
+			<button type="submit" onclick="payWithPaystack()"> Pay </button>
+		</div>
 				</form>
+				<script src="https://js.paystack.co/v1/inline.js"></script> 
 			</div>
 		</div>
 	</div>
+
+	
 </section>
 	
 	<!--//grids-sec1-->
@@ -130,5 +225,7 @@
 	</section>
 	<!-- //mid-slider-->
 	<!--/tabs-->
+	
 	</x-auth-card>
+
 </x-guest-layout>

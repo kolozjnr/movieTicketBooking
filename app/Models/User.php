@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Relationship
+    public function tickets()
+    {
+        return $this->hasOne(UserBookingRecord::class);
+    }
 }

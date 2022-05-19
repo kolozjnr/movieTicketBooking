@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnivController;
 use App\Http\Controllers\MovieUploadController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,11 @@ Route::controller(UnivController::class)->group(function ()
     Route::get('horror', 'horror')->name('Horror');
     Route::get('thriller', 'thriller')->name('Thriller');
     Route::get('details/id={id}', 'getDetails')->name('getDetails');
+    Route::post('details', 'pay')->name('savePay');
 });
+// Paystack Payment Route
+Route::post('/pay', [PaymentController::class, 'inlinePay'])->name('inlinePay');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

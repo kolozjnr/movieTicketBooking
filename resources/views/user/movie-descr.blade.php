@@ -32,6 +32,7 @@
 							</div>
 							<span class="fa fa-play video-icon" aria-hidden="true"></span>
 						</div>
+						<strong class="text-large text-bold text-white">&#8358 {{$movie->movie_price}}</strong>
 						<div class="button-center text-center mt-4">
 							<a href="{{route('getDetails', $movie->id)}}" class="btn watch-button">Watch now</a>
 						</div>
