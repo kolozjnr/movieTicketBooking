@@ -144,7 +144,7 @@
 									<img class="img-fluid" src="/movies/{{ $movie->movie_img }}" alt="">
 								</figure>
 								<div class="box-content">
-									<h3 class="title">Frozen 2</h3>
+									<h3 class="title"><strong>{{$movie->movie_title}}</strong></h3>
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> {{$movie->movie_hr}} Hr {{$movie->movie_mins}} min</span>
 
 										<span class="post fa fa-heart text-right"></span>

@@ -11,7 +11,7 @@
 		amount += parseFloat(input[i].value);
     }
   }
-  document.getElementById("amount").value = "\u20A6" + amount.toFixed(2);
+  document.getElementById("amount").value = amount.toFixed(2);
 }
 
 
@@ -150,12 +150,13 @@
 							</div>
 						</div>
 						<label for="" class="pt-8"><strong>Total:</strong></label>
-						<input type="tel" value="&#8358" id="amount" required />
+						<strong>&#8358</strong> <input type="tel" id="amount" readonly required />
+						<div class="form-submit flex items-center justify-end mt-4">
+							<button type="submit" class="btn btn-success ml-3 mb-5" onclick="payWithPaystack()"> Pay </button>
+						</div>
 					</div>
 					
-		<div class="form-submit">
-			<button type="submit" onclick="payWithPaystack()"> Pay </button>
-		</div>
+					
 				</form>
 				<script src="https://js.paystack.co/v1/inline.js"></script> 
 			</div>

@@ -48,6 +48,10 @@ class MovieUploadController extends Controller
             'movie_lang'=>'required',
             'movie_catr'=>'required',
             'movie_link'=>'required',
+            'movie_price'=>'required',
+            'movie_date'=>'required',
+            'state'=>'required',
+            'loc'=>'required',
             'movie_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:6048',
             //'' => 'image|mimes:jpeg,png,jpg,gif,svg|max:6048',
         ]);

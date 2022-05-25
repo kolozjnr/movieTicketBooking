@@ -9,7 +9,7 @@ class movieUpload extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['movie_title','movie_descr','movie_type','movie_genre','movie_hr','movie_mins','movie_lang','movie_catr','movie_img','movie_link','added_by'];
+    protected $fillable = ['movie_title','movie_descr','movie_type','movie_genre','movie_hr','movie_mins','movie_lang','movie_catr','movie_img','movie_link','added_by','movie_date','movie_price','loc','state'];
 
     //Relationship
     public function tickets()

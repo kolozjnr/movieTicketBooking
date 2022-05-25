@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@isset($title){{ $title }} | @endisset Nabillah</title>
+
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -157,7 +158,7 @@
             key: 'pk_test_c47cc0952a6e3844ff3c405c822dc11649b0ce50', // Replace with your public key
             email: document.getElementById("email-address").value,
             amount: document.getElementById("amount").value * 100,
-            ref: 'NM'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+            ref: 'Nabillah'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             // label: "Optional string that replaces customer email"
             onClose: function(){
                 window.location = "/";

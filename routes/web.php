@@ -48,7 +48,7 @@ Route::post('/pay', [PaymentController::class, 'inlinePay'])->name('inlinePay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin/admin');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

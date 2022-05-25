@@ -83,6 +83,44 @@
                         </div>
                         <div class="row form-group">
                             <div class="mb-3 col-6">
+                                <label for="exampleFormControlInput" class="visually-hidden form-label">Amount</label>
+                                <input type="tel" class="form-control" name="movie_price" id="exampleFormControlInput1" placeholder="Amount">
+                            </div>
+                            <div class="mb-3 col-6 form-group">
+                                <label for="exampleFormControlInput" class="visually-hidden form-label">Date</label>
+                                <input type="datetime-local" class="form-control" name="movie_date" id="exampleFormControlInput1" placeholder="Show Date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                            <div class="col-sm-6">
+                                <label for="exampleFormControlSelect1">State</label>
+                                <select class="form-select" 
+                                onchange="toggleLGA(this);" 
+                                name="state" 
+                                id="state" 
+                                aria-label="Default select example" :value="old('state')" required autofocus>
+                                    <option selected="selected">Select State</option>
+                                    <option value="Abuja">Abuja</option>
+                                    <option value="Lagos">Lagos</option>
+                                    <option value="Rivers">Rivers</option>
+                                    <option value="Minna">Minna</option>
+                                    
+                                    </select>
+                            </div>
+                            <div class="col-sm-6">
+                            <label for="exampleFormControlSelect1">Location</label>
+                            <select name="loc" id="lga" class="form-control select-lga" required>
+                            </select>
+                                                        
+                                                        
+            </select>
+            
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="mb-3 col-6">
                                 <label for="exampleFormControlInput" name="" class="visually-hidden form-label">Movie Language</label>
                                 <input type="file" name="movie_img" class="form-control" placeholder="image">
                             </div>

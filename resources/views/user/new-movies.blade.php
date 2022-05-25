@@ -1,4 +1,4 @@
-<x-guest-layout title="Movie Home">
+<x-guest-layout title=" New Movie">
     <x-auth-card>
 
 @include('layouts.menu')
