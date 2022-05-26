@@ -36,7 +36,7 @@
 
 						<!-- Name -->
 						<div>
-						<x-input id="name" class="block mt-1 w-full" type="hidden" name="movie_title" value="{{$movieUpload['movie_title']}}" required autofocus />
+						<x-input id="movie-title" class="block mt-1 w-full" type="hidden" name="movie_title" value="{{$movieUpload['movie_title']}}" required autofocus />
 						<x-input id="name" class="block mt-1 w-full" type="hidden" name="movie_id" value="{{$movieUpload['id']}}" required autofocus />
 
 						 <!-----Add Movie Date and Price field once Available---->
@@ -71,9 +71,9 @@
 					<div class="col-6">
 						<div class="row">
 							<div class="col-4">
-								<input type="checkbox" class="mr-2" name="R1" value="{{$movieUpload['movie_price']}}" id="r1" onclick="totalIt()" disabled>
-								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R2" onclick="totalIt()" id="r2">
-								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R3" onclick="totalIt()" id="r3">
+								<input type="checkbox" class="mr-2" name="R1" value="{{$movieUpload['movie_price']}}" id="check" onclick="totalIt()" disabled>
+								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R2" onclick="totalIt()" id="check">
+								<input type="checkbox" class="sitNo mr-2" value="{{$movieUpload['movie_price']}}" name="R3" onclick="totalIt()" id="check">
 								<input type="checkbox" class="sitNo mr-2" name="R4" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
 								<input type="checkbox" class="sitNo mr-2" name="R5" value="{{$movieUpload['movie_price']}}" onclick="totalIt()" id="">
 							</div>
@@ -163,7 +163,6 @@
 		</div>
 	</div>
 
-	
 </section>
 	
 	<!--//grids-sec1-->

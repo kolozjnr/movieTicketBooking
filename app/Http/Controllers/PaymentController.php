@@ -41,75 +41,51 @@ class PaymentController extends Controller
 
     public function inlinePay(Request $req)
     {
-        //inline payment INLINE
+        $ref = $_GET['reference'];
+        if($ref == ""){
+            header("Location:javascript://history.go(-1)");
+        }
 
         $curl = curl_init();
-        $email = $req->user_email;
-
-        $amount = 30000;  //the amount in kobo. This value is actually NGN 300
+        
         curl_setopt_array($curl, array(
-
-            CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
-
+            CURLOPT_URL => "https://api.paystack.co/transaction/verify/" . rawurlencode($ref),
             CURLOPT_RETURNTRANSFER => true,
-
-            CURLOPT_CUSTOMREQUEST => "POST",
-
-            CURLOPT_POSTFIELDS => json_encode([
-
-                'amount'=>$amount,
-
-                'email'=>$email,
-
-                //'reference' => genReference(10);
-
-            ]),
-
-            CURLOPT_HTTPHEADER => [
-
-                "authorization: Bearer pk_test_c47cc0952a6e3844ff3c405c822dc11649b0ce50", //replace this with your own live key
-
-                "content-type: application/json",
-
-                "cache-control: no-cache"
-
-            ],
-
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+            "Authorization: Bearer sk_test_a5587ec3db79f0dc658e0ed96aee9a7f17f58dcb",
+            "Cache-Control: no-cache",
+            ),
         ));
-
+        
         $response = curl_exec($curl);
-
         $err = curl_error($curl);
-        if($err){
-
-            // there was an error contacting the Paystack API
-
-            die('Curl returned error: ' . $err);
-
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            //echo $response;
+            $result = json_decode($response);
         }
-        $tranx = json_decode($response, true);
+        $user_input = [];
+        if ($result->data->status == 'success') {
+            $status = $result->data->status;
+            $reference = $result->data->reference;
+            $name = $result->data->customer->first_name;
+            $user_email = $result->data->customer->email;
+            $movieTitle = $req->movieTitle;
+            $check = $req->check;
 
-        //return $tranx;
-
-        if(!$tranx['status']){
-
-            // there was an error from the API
-
-            print_r('API returned error: ' . $tranx['message']);
-
+            dd($result,$req);
+        }else{
+            header("Location: '/'");
         }
-
-
-        // comment out this line if you want to redirect the user to the payment page
-
-        // print_r($tranx);
-
-
-        // redirect to page so User can pay
-
-
-        header('Location: ' . $tranx['data']['authorization_url']);
-
-
     }
+    
+        
 }

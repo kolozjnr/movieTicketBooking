@@ -116,4 +116,8 @@ class UnivController extends Controller
        );
        dd($pay);
    }
+
+   public function paystackPay(){
+       return view('user.verify_transaction');
+   }
 }

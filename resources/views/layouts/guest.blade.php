@@ -158,6 +158,9 @@
             key: 'pk_test_c47cc0952a6e3844ff3c405c822dc11649b0ce50', // Replace with your public key
             email: document.getElementById("email-address").value,
             amount: document.getElementById("amount").value * 100,
+            userName: document.getElementById("last-name"),
+            movieTitle: document.getElementById("movie-title"),
+            check: document.getElementById("check"),
             ref: 'Nabillah'+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
             // label: "Optional string that replaces customer email"
             onClose: function(){
@@ -167,13 +170,16 @@
             callback: function(response){
             let message = 'Payment complete! Reference: ' + response.reference;
             alert(message);
-            window.location = "/verify_transaction.php?reference=" + response.reference;
+            window.location = "{{route('inlinePay')}}?reference=" + response.reference;
             }
         });
         handler.openIframe();
         }
     </script>
     
+
+
+
     </body>
 </html>
 
